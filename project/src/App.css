@@ -1,44 +1,111 @@
-body {
+/* @font-face {
+  font-family: "";
+  font-style: normal;
+  font-weight: normal;
+  src: url(font/shluk-regular-aaa.otf) 
+}  */
+
+
+#body {
   text-align: right;
   direction: rtl;
+  /* background-image: url("images/a.jpg"); */
+  background-size: 100% 130%;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#body_content {
+  width: 80%;
+  height: 100vh;
+}
+
+#card {
+  border: 1px solid rgb(212, 210, 210);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#header_father {
+  display: flex;
+  justify-content: center;
+}
+
+#header {
+  position: fixed;
+  background-color: white;
+  height: 42px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+#form {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#shopping_list_page {
+  padding-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#about,
+#login,
+#signIn,
+#addRecipe {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: white;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+
+div #container {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+#button {
+  background-color: white;
+  margin: 5px;
+  width: 133px;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+#button:hover {
+  color: #ff8080;
+  border-radius: 0px;
+  border-bottom: 2px solid #ff8080;
+}
+
+
+#p {
+  display: flex;
+  justify-content: center;
+}
+
+#row_in_shoppingList {
+  display: flex;
+  justify-content: center;
+}
+
+#row_in_shoppingList div {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#row_in_shoppingList div h4 {
+  display: flex;
+  justify-content: center;
 }

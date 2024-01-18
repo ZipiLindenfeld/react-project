@@ -73,25 +73,20 @@ const recipeServer = {
     },
     Delete: (req, res) => {
         const { Id } = req.params;
-        // console.log(Id)
         let recipees = JSON.parse(localStorage.getItem('recipe') | [])
         if (!recipees.length) {
             localStorage.setItem('recipe', JSON.stringify(recipe))
             recipees = recipe;
         }
-        // recipees = recipees.filter(x => x.Id != Id);
-        // console.log(recipees);
-
         let index = -1;
         for (let i = 0; i < recipees.length; i++) {
             console.log(recipees[i].Id);
-            console.log({ Id });
+            console.log(Id);
             if (recipees[i].Id == Id) {
                 index = i;
                 break;
             }
         }
-        console.log(index);
         recipees.splice(index, 1)
 
         localStorage.setItem('recipe', JSON.stringify(recipees))

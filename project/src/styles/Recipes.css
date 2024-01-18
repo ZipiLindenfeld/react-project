@@ -1,22 +1,30 @@
-.recipy {
-    background-color: #322514;
-
-    background-color: #fbcbc9;
-
+.recipe {
+    background-color: #f0ebe57d;
+    margin-top: 50px;
     width: 380px;
     height: fit-content;
     border-radius: 7.5px;
 }
 
 #categories {
-    background-color: #e75874;
     border-radius: 0.5px;
     width: max-content;
     text-align: right;
 }
 
+#select_options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.select_option {
+    margin-left: 50px;
+}
+
 .but {
-    background-color: #f6dbda;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -41,4 +49,65 @@
 
 .a {
     display: flex;
+}
+
+
+.title_img {
+    position: absolute;
+    font-size: 25px;
+    color: rgb(12, 9, 6);
+    background-color: rgba(255, 255, 255, 0.632);
+    width: 100%;
+    text-align: center;
+    top: 0px;
+    margin-top: 50px;
+}
+
+.Enlarged_image {
+    position: sticky;
+    justify-items: center;
+    overflow: hidden;
+    margin: 20px;
+    width: fit-content;
+    border: 1px transparent;
+    border-radius: 51px 0 51px 0;
+}
+
+.Enlarged_image:hover .Enlarged_image_img {
+    transform: scale(1.133);
+}
+
+.Enlarged_image_img {
+    width: 300px;
+    height: 300px;
+    /* position: relative; */
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+#recipe_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allrecipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#show_btn {
+    width: fit-content;
+}
+
+div h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#show_recipe {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

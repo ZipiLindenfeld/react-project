@@ -16,16 +16,13 @@ const categoryServer = {
     },
 
     addCategory: (req, res) => {
-        // const {
-        //     Name, UserId, CategoryId, Img, Duration, Difficulty, Description,
-        //     Ingrident, Instructions } = req.body;
         const { Name } = req.body;
-        console.log(Name);
         let categories = JSON.parse(localStorage.getItem('category') | [])
         if (!categories.length) {
             localStorage.setItem('category', JSON.stringify(category))
             categories = category;
         }
+
         if (!Name) {
             // לא נשלח מידע
             res.status(400)
@@ -40,6 +37,7 @@ const categoryServer = {
         const newCategory = { Name, Id };
         categories.push(newCategory)
         localStorage.setItem('category', JSON.stringify(categories))
+
         res.send(newCategory);
     }
 }

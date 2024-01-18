@@ -60,19 +60,19 @@ const BayService = {
             localStorage.setItem('bay', JSON.stringify(bay))
             bayList = bay;
         }
-
-
+        
+      
         // bayList = bayList.filter(x => x.Id != Id);
-        let index = -1;
-        for (let i = 0; i < bayList.length; i++) {
-            if (bayList[i].Id == Id) {
-                index = i;
+        let index=-1;
+        for(let i=0; i<bayList.length; i++){
+            if(bayList[i].Id==Id){
+                index=i;
                 break;
             }
         }
         bayList.splice(index, 1);
         console.log(index);
-        console.log(bayList, Id);
+        console.log(bayList,Id);
         localStorage.setItem('bay', JSON.stringify(bayList))
         res.send('ok');
     },
