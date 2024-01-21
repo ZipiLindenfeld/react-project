@@ -25,11 +25,12 @@
 }
 
 .but {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    height: 25px;
+    width: fit-content;
     color: black;
     margin: 2px;
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -47,9 +48,7 @@
     justify-content: center;
 }
 
-.a {
-    display: flex;
-}
+
 
 
 .title_img {
@@ -80,7 +79,6 @@
 .Enlarged_image_img {
     width: 300px;
     height: 300px;
-    /* position: relative; */
     transition: all 0.4s;
     z-index: -1;
 }
@@ -110,4 +108,22 @@ div h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+#icons,
+#recipe_title {
+    display: flex;
+    justify-content: center;
+}
+
+#product_detailes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px;
 }
